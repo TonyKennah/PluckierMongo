@@ -2,9 +2,37 @@
 
 # Pluckier-Mongo Database Library
 
-This is a Java library for managing user data in a MongoDB database. It provides a simple repository pattern for creating, reading, updating, and deleting user information.
+This is a Java library for managing user data in a MongoDB database. It provides a simple repository pattern for creating, reading, updating, and deleting user information.  It is designed to be used by other applications that need to interact with the Pluckier user database for Creation, Update, Payments, Logins, Forgotten Passwords (standard user operations).
 
-The library is designed to be used by other applications that need to interact with the user database for Creation, Update, Payments, Logins, Forgotten Passwords (standard user operations).
+## Installation
+
+This library is hosted on GitHub Packages. To use it in your Maven project, you need to add the dependency to your `pom.xml` and configure the repository.
+
+### 1. Add the Dependency
+
+Add the following to your `pom.xml`'s `<dependencies>` section:
+
+```xml
+<dependency>
+    <groupId>co.uk.pluckier.mongo</groupId>
+    <artifactId>pluckier-mongo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+</dependency>
+```
+
+### 2. Configure the Repository
+
+Since the package is not on Maven Central, you also need to tell Maven where to find it by adding the following to your `pom.xml`:
+
+```xml
+<repositories>
+    <repository>
+        <id>github</id>
+        <name>GitHub TonyKennah Apache Maven Packages</name>
+        <url>https://maven.pkg.github.com/TonyKennah/pluckiermongo</url>
+    </repository>
+</repositories>
+```
 
 ## Core Components
 
@@ -75,3 +103,7 @@ You can run the full test suite using Maven:
 ```sh
 mvn clean test
 ```
+
+## Packaging
+
+Automatically packaged and deplpoyed to github packages via github actions.
