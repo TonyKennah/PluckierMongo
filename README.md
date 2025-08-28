@@ -1,3 +1,5 @@
+[![Build & Test Status](https://github.com/TonyKennah/PluckierMongo/actions/workflows/maven.yml/badge.svg)](https://github.com/TonyKennah/PluckierMongo/actions/workflows/maven.yml)
+
 # Pluckier-Mongo User Library
 
 This is a Java library for managing user data in a MongoDB database. It provides a simple repository pattern for creating, reading, updating, and deleting user information.
