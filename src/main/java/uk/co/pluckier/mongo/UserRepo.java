@@ -90,6 +90,21 @@ public class UserRepo implements Repo {
 		lrepo = mongoClient.getDatabase(p.getProperty(DB_DATABASE)).getCollection(p.getProperty(DB_COLLECTION_LOGINS), Login.class);
 	}
 
+	/**
+	 * A constructor designed for testing. It allows for injecting mock or fake
+	 * collections, which makes unit testing possible without a real database.
+	 *
+	 * @param repo The collection for User objects.
+	 * @param frepo The collection for Forgot objects.
+	* @param lrepo The collection for Login objects.
+	 */
+	public UserRepo(MongoCollection<User> repo, MongoCollection<Forgot> frepo, MongoCollection<Login> lrepo) {
+		this.mongoClient = null; // Not used in mocked tests, so it can be null.
+		this.repo = repo;
+		this.frepo = frepo;
+		this.lrepo = lrepo;
+	}
+
 	public List<User> getAll() { 
 		return StreamSupport
 		  .stream(repo.find().spliterator(), true)
