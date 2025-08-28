@@ -56,10 +56,15 @@ try (Repo userRepo = UserRepo.getDefaultInstance()) {
         System.out.println("User not found.");
     }
 }
+```
 
 ## Testing
 
-This project uses [JUnit 5](https://junit.org/junit5/) for unit testing and [Mockito](https://site.mockito.org/) for mocking database dependencies.
+This project uses 
+[JUnit 5](https://junit.org/junit5/) 
+for unit testing and 
+[Mockito](https://site.mockito.org/) 
+for mocking database dependencies.
 
 This approach allows the `UserRepo` logic to be tested in isolation without needing a real or in-memory database. The tests simulate the behavior of the MongoDB driver, making them extremely fast and reliable.
 
