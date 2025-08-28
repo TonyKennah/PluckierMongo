@@ -4,7 +4,7 @@
 
 This is a Java library for managing user data in a MongoDB database. It provides a simple repository pattern for creating, reading, updating, and deleting user information.
 
-The library is designed to be used by other applications that need to interact with the user database.
+The library is designed to be used by other applications that need to interact with the user database for Creation, Update, Payments, Logins, Forgotten Passwords (standard user operations).
 
 ## Core Components
 
